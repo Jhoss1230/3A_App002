@@ -23,14 +23,24 @@ def main(page: ft.Page):
                             color="red",
                             width=100,
                             height=50)
+    def no(e):
+        btnSi.width+=30
+        btnNo.height+=10
+        page.update()
+    def si(e):
+        Img1.src="Feliz.png"
+        page.update()
+        
+    btnSi.on_click=si
+    btnNo.on_click=no
     page.add(
         ft.Column(
             [
                 lbl1,
                 Img1,
                 ft.Row([btnSi,btnNo],
-                       alignment=ft.MainAxisAlignment.CENTER,
-                       ),
+                        alignment=ft.MainAxisAlignment.CENTER,
+                        ),
             ],
             alignment=ft.MainAxisAlignment.CENTER,
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
